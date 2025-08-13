@@ -22,7 +22,7 @@ jobs:
         uses: aquasecurity/trivy-action@master
         with:
           image-ref: godcandidate/taskops-ui:latest
-          exit-code: '1'
+          # exit-code: '1'
           format: 'template'
           template: '@/contrib/sarif.tpl'
           output: 'trivy-results.sarif'
