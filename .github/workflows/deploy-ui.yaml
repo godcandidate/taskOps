@@ -4,6 +4,11 @@ on:
   push:
     branches: [frontend-app]
 
+permissions:
+  contents: read
+  security-events: write
+  actions: read
+
 jobs:
   build-scan-deploy:
     runs-on: ubuntu-latest
