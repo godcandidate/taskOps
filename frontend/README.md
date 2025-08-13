@@ -53,8 +53,9 @@ The application uses the following environment variables that are set in the doc
 ```yaml
 environment:
   - NODE_ENV=production
-  - AUTH_API_URL=http://auth-service:9193/api/v1
+  - AUTH_API_URL=http://identity-service:9193/api/v1
   - TASK_API_URL=http://task-service:9191/api/v1
+  - (the port of your services could be any) 
 ```
 
 ### Running the Application
