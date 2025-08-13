@@ -16,12 +16,12 @@ jobs:
         run: |
           cd frontend
           echo "Building Docker image..."
-          docker build -t godcandidate/taskOps-ui:latest .
+          docker build -t godcandidate/taskops-ui:latest .
 
       - name: Run Trivy vulnerability scan
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: godcandidate/taskOps-ui:latest
+          image-ref: godcandidate/taskops-ui:latest
           exit-code: '1'
           format: 'template'
           template: '@/contrib/sarif.tpl'
