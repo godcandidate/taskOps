@@ -1,4 +1,10 @@
 # TaskMaster Frontend
+![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-blue?style=for-the-badge&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+![Trivy Security Scan](https://img.shields.io/badge/Security-Trivy-green?style=for-the-badge&logo=snyk&logoColor=white&labelColor=black)
+![Build Passed](https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge&logo=github&logoColor=white)
+
 
 TaskMaster is a modern task management application built with Next.js that provides role-based dashboards for both administrators and regular users. The application features a clean, responsive UI and supports Docker deployment for easy setup.
 
