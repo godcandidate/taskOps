@@ -1,0 +1,11 @@
+/home/christian-solomon/Code/userService/src/main/java/com/csniico/userService/Entity/User.java
+/home/christian-solomon/Code/userService/src/main/java/com/csniico/userService/Services/DynamoDBService.java
+/home/christian-solomon/Code/userService/src/main/java/com/csniico/userService/Services/UserCRUDService.java
+/home/christian-solomon/Code/userService/src/main/java/com/csniico/userService/Services/UserServiceMessagePublisher.java
+/home/christian-solomon/Code/userService/src/main/java/com/csniico/userService/UserServiceApplication.java
+/home/christian-solomon/Code/userService/src/main/java/com/csniico/userService/config/KafkaProducerConfig.java
+/home/christian-solomon/Code/userService/src/main/java/com/csniico/userService/controller/EventController.java
+/home/christian-solomon/Code/userService/src/main/java/com/csniico/userService/dto/ApiResponse.java
+/home/christian-solomon/Code/userService/src/main/java/com/csniico/userService/dto/UserRequest.java
+/home/christian-solomon/Code/userService/src/main/java/com/csniico/userService/dto/UserResponse.java
+/home/christian-solomon/Code/userService/src/main/java/com/csniico/userService/repository/UserRepository.java
