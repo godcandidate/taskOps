@@ -2,7 +2,7 @@ name: Scan Identity Service with Trivy
 
 on:
   push:
-    branches: [frontend-app]
+    branches: [services]
 
 permissions:
   contents: read
