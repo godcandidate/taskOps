@@ -1,0 +1,58 @@
+name: Scan UI with Trivy
+
+on:
+  push:
+    branches: [frontend-app]
+
+permissions:
+  contents: read
+  security-events: write
+  actions: read
+
+jobs:
+  ui-trivy-scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build Docker image
+        run: |
+          cd frontend
+          echo "Building Docker image..."
+          docker build -t godcandidate/taskops-ui:latest .
+
+      - name: Run Trivy vulnerability scan
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: godcandidate/taskops-ui:latest
+          format: 'table'
+          output: 'trivy-results.txt'
+          severity: 'CRITICAL'
+          exit-code: '1'
+
+      - name: Display Trivy results
+        if: always()  
+        run: |
+          echo "📋 Trivy Scan Results:"
+          if [ -f "trivy-results.txt" ]; then
+            cat trivy-results.txt
+          else
+            echo "❌ Trivy results file not found!"
+            exit 1
+          fi
+          
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Push image to Docker Hub
+        run: |
+          echo "Pushing Docker image to Docker Hub..."
+          docker push godcandidate/taskops-ui:latest
+
+ 
