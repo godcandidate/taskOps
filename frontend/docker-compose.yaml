@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  frontend:
+    image: godcandidate/frontend-service:latest
+    ports:
+      - "81:3000"
+    environment:
+      - NODE_ENV=production
+      - AUTH_API_URL=http://auth-service:9193/api/v1
+      - TASK_API_URL=http://task-service:9191/api/v1
