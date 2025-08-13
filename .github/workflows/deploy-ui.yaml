@@ -1,4 +1,4 @@
-name: Deploy UI to DockerHub
+name: Scan UI with Trivy
 
 on:
   push:
