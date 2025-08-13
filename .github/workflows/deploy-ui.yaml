@@ -2,7 +2,7 @@ name: Deploy UI to DockerHub
 
 on:
   push:
-    branches: [frontend]
+    branches: [frontend-app]
 
 jobs:
   build-scan-deploy:
