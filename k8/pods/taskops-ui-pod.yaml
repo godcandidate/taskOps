@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: taskops-ui-pod
+  labels:
+    app: taskops-app
+  spec:
+    containers:
+      - name: taskops-ui
+        image: godcandidate/taskops-ui:latest
