@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: taskops-config
+data:
+  FRONTEND_URL: "http://192.168.49.2:30001"
+  API_BASE_URL: "http://192.168.49.2:30400/api/v1/todos"
+  MONGO_URI: "mongodb://taskops-mongodb-service:27017/todoDB"
