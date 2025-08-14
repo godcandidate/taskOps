@@ -22,3 +22,9 @@ spec:
           image: godcandidate/taskops-ui:latest
           ports:
             - containerPort: 80
+          env:
+            - name: API_BASE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: taskops-config
+                  key: API_BASE_URL
