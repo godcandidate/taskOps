@@ -1,0 +1,32 @@
+services:
+  todo_frontend:
+    container_name: taskops-ui
+    image: godcandidate/taskops-ui:latest
+    environment:
+      - API_BASE_URL=http://localhost:4000/api/v1/todos
+    ports:
+      - "3000:80" # Frontend will be accessible on port 3000
+    depends_on:
+      - todo_backend
+
+  todo_backend:
+    container_name: taskops-api
+    image: godcandidate/taskops-api:latest
+    ports:
+      - "4000:4000" # Backend will be accessible on port 4000
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/todoDB # MongoDB connection string
+      - FRONTEND_URL=http://localhost:3000
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:latest
+    container_name: mongodb
+    volumes:
+      - mongodb_data:/data/db # Data persistence for MongoDB
+    ports:
+      - "27017:27017" # MongoDB will be accessible on port 27017
+
+volumes:
+  mongodb_data: # Volume to persist MongoDB data
