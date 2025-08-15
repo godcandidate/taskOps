@@ -1,0 +1,56 @@
+prometheus:
+  enabled: true
+
+loki:
+  enabled: true
+
+kube-prometheus-stack:
+  grafana:
+    adminPassword: admin123
+    service:
+      type: NodePort
+      nodePort: 30300
+    persistence:
+      enabled: false
+    resources:
+      requests:
+        memory: 128Mi
+        cpu: 100m
+      limits:
+        memory: 512Mi
+        cpu: 500m
+    securityContext:
+      runAsUser: 472
+      runAsGroup: 472
+      fsGroup: 472
+    additionalDataSources:
+    - name: Loki
+      type: loki
+      url: http://monitoring-loki:3100
+      access: proxy
+      isDefault: false
+  
+  prometheus:
+    service:
+      type: NodePort
+      nodePort: 30301
+    prometheusSpec:
+      retention: 7d
+      storageSpec:
+        volumeClaimTemplate:
+          spec:
+            accessModes: ["ReadWriteOnce"]
+            resources:
+              requests:
+                storage: 1Gi
+
+loki-stack:
+  loki:
+    persistence:
+      enabled: false
+  
+  grafana:
+    enabled: false  # Use prometheus-stack grafana
+  
+  promtail:
+    enabled: true
