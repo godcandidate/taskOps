@@ -7,35 +7,25 @@
 ![Loki](https://img.shields.io/badge/Loki-F46800?style=for-the-badge&logo=grafana&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
 
-**A microservices-based task management app designed as a personal DevOps playground.**
+---
+
+A microservices-based task management app designed as a personal DevOps playground.
+Explore and practice cloud-native technologies including Kubernetes, Helm, CI/CD, observability, and more.
+
+## 🎯 Learning Goals
+
+- Kubernetes fundamentals (pods, deployments, services)
+- Helm charts and package management
+- CI/CD pipelines with GitHub Actions
+- Observability with Prometheus, Grafana, and Loki
+- Microservices architecture patterns
+- 12-Factor App practices
 
 
 ## Infrastructure
-Explore and practice cloud-native technologies including Kubernetes, Helm, CI/CD, observability, and more.
 
 <p align="center"> <img src="assets/infrasturture.png" alt="Image Gallery App" width="600"> </p>
 
-## 🚀 Quick Start
-
-### Simple Todo App
-```bash
-cd app/
-docker-compose up -d
-```
-Access at: http://localhost:3000
-
-### Kubernetes Deployment
-```bash
-cd k8/
-kubectl apply -f . -n taskops --create-namespace
-```
-
-### Full Monitoring Stack
-```bash
-cd helm-with-monitoring/
-./deploy.sh
-```
-Access Grafana at: http://192.168.49.2:30300
 
 ## 📁 Project Structure
 
@@ -51,18 +41,32 @@ taskOps/
 └── .github/workflows/     # CI/CD pipelines
 ```
 
-## 🎯 Learning Goals
 
-- Kubernetes fundamentals (pods, deployments, services)
-- Helm charts and package management
-- CI/CD pipelines with GitHub Actions
-- Observability with Prometheus, Grafana, and Loki
-- Microservices architecture patterns
-- 12-Factor App practices
 
-## 🔗 Repository
 
-https://github.com/godcandidate/my_todo_lab
+## 🚀 Quick Start
+
+### 🐳 Simple Todo App
+```bash
+cd app/
+```
+📖 **[See app/README.md](app/README.md)** for detailed setup instructions
+
+### ☸️ Kubernetes Deployment
+```bash
+cd k8/
+```
+📖 **[See k8/README.md](k8/README.md)** for Kubernetes deployment guide
+
+### 📊 Full Monitoring Stack
+```bash
+cd helm-with-monitoring/
+```
+📖 **[See helm-with-monitoring/README.md](helm-with-monitoring/README.md)** for complete monitoring setup
+
+
+
+
 
 ---
 
