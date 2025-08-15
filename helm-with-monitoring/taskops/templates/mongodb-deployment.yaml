@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: taskops-mongodb-deployment
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app: taskops-app
+    component: mongodb
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      app: taskops-app
+      component: mongodb
+  template:
+    metadata:
+      labels:
+        app: taskops-app
+        component: mongodb
+    spec:
+      containers:
+        - name: taskops-mongodb
+          image: {{ .Values.images.mongodb.repository }}:{{ .Values.images.mongodb.tag }}
+          ports:
+            - containerPort: 27017
+          volumeMounts:
+            - name: taskops-mongodb-storage
+              mountPath: /data/db
+      volumes:
+        - name: taskops-mongodb-storage
+          persistentVolumeClaim:
+            claimName: taskops-mongodb-pvc

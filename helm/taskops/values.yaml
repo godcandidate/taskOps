@@ -1,0 +1,21 @@
+config:
+  frontendUrl: "http://192.168.49.2:30001"
+  apiBaseUrl: "http://192.168.49.2:30400/api/v1/todos"
+  mongoUri: "mongodb://taskops-mongodb-service:27017/todoDB"
+
+images:
+  ui:
+    repository: godcandidate/taskops-ui
+    tag: latest
+  api:
+    repository: godcandidate/taskops-api
+    tag: latest
+  mongodb:
+    repository: mongo
+    tag: latest
+
+storage:
+  size: 10Mi
+  storageClass: standard
+
+replicas: 1

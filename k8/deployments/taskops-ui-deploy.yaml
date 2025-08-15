@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: taskops-ui-deployment
+  labels:
+    app: taskops-app
+    component: ui
+spec:
+  replicas: 1  
+  selector:
+    matchLabels:
+      app: taskops-app
+      component: ui
+  template:
+    metadata:
+      labels:
+        app: taskops-app
+        component: ui
+    spec:
+      containers:
+        - name: taskops-ui
+          image: godcandidate/taskops-ui:latest
+          ports:
+            - containerPort: 80
+          env:
+            - name: API_BASE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: taskops-config
+                  key: API_BASE_URL

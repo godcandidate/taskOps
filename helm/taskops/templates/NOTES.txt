@@ -1,0 +1,11 @@
+1. Get the application URLs:
+   Frontend: http://{{ .Values.config.frontendUrl | replace "http://" "" }}
+   API: http://{{ .Values.config.apiBaseUrl | replace "http://" "" | replace "/api/v1/todos" "" }}
+
+2. Check deployment status:
+   kubectl get pods -n {{ .Release.Namespace }}
+
+3. View logs:
+   kubectl logs -f deployment/taskops-ui-deployment -n {{ .Release.Namespace }}
+   kubectl logs -f deployment/taskops-api-deployment -n {{ .Release.Namespace }}
+   kubectl logs -f deployment/taskops-mongodb-deployment -n {{ .Release.Namespace }}

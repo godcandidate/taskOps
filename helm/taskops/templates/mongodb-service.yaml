@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service 
+metadata:
+  name: taskops-mongodb-service
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app: taskops-app
+spec:
+  type: ClusterIP
+  selector:
+    app: taskops-app
+    component: mongodb
+  ports:
+    - port: 27017
+      targetPort: 27017

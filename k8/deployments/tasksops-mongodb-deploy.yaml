@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: taskops-mongodb-deployment
+  labels:
+    app: taskops-app
+    component: mongodb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: taskops-app
+      component: mongodb
+  template:
+    metadata:
+      labels:
+        app: taskops-app
+        component: mongodb
+    spec:
+      containers:
+        - name: taskops-mongodb
+          image: mongo:latest
+          ports:
+            - containerPort: 27017
+          volumeMounts:
+            - name: taskops-mongodb-storage
+              mountPath: /data/db
+      volumes:
+        - name: taskops-mongodb-storage
+          persistentVolumeClaim:
+            claimName: taskops-mongodb-pvc
