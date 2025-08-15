@@ -2,6 +2,27 @@
 
 Simple task management application with frontend and backend.
 
+## Screenshots
+ - Homepage
+<p align="center"> <img src="../assets/dashboard.png" alt="Image Gallery App" width="600"> </p>
+
+- Task Dashboard
+<p align="center"> <img src="../assets/task-dash.png" alt="Task Dashboard" width="800"> </p>
+
+
+## Features
+- **Frontend**: React UI
+- **Backend**: Node.js API  
+- **Database**: MongoDB
+- **Docker**: Containerized setup
+
+## Functionalities
+
+- ✅ **Create/Add Tasks** - Add new tasks to your todo list
+- ✏️ **Edit Tasks** - Update existing task details
+- 🗑️ **Delete Tasks** - Remove completed or unwanted tasks
+- 🔍 **Search Tasks** - Find tasks quickly with search functionality
+
 ## Quick Start
 
 ```bash
