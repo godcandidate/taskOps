@@ -9,6 +9,8 @@
 
 **A microservices-based task management app designed as a personal DevOps playground.**
 
+
+## Infrastructure
 Explore and practice cloud-native technologies including Kubernetes, Helm, CI/CD, observability, and more.
 
 <p align="center"> <img src="assets/infrasturture.png" alt="Image Gallery App" width="600"> </p>
