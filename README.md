@@ -1,4 +1,4 @@
-# TaskOps 🛠️
+# TaskOps 
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
 ![Helm](https://img.shields.io/badge/Helm-0F1689?style=for-the-badge&logo=helm&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
@@ -11,7 +11,7 @@
 
 Explore and practice cloud-native technologies including Kubernetes, Helm, CI/CD, observability, and more.
 
-<p align="center"> <img src="assets/infrasturture.png" alt="Image Gallery App" width="800"> </p>
+<p align="center"> <img src="assets/infrasturture.png" alt="Image Gallery App" width="600"> </p>
 
 ## 🚀 Quick Start
 
@@ -51,12 +51,12 @@ taskOps/
 
 ## 🎯 Learning Goals
 
-- ✅ Kubernetes fundamentals (pods, deployments, services)
-- ✅ Helm charts and package management
-- ✅ CI/CD pipelines with GitHub Actions
-- ✅ Observability with Prometheus, Grafana, and Loki
-- ✅ Microservices architecture patterns
-- ✅ 12-Factor App practices
+- Kubernetes fundamentals (pods, deployments, services)
+- Helm charts and package management
+- CI/CD pipelines with GitHub Actions
+- Observability with Prometheus, Grafana, and Loki
+- Microservices architecture patterns
+- 12-Factor App practices
 
 ## 🔗 Repository
 
